@@ -1,0 +1,31 @@
+@import colors
+@import elements
+
+.footer
+    background-color: #1f1f1f
+    padding-top: 40px
+    padding-bottom: 40px
+    &-container
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr
+    &-logo
+        img
+            width: 100%
+            max-width: 140px
+    &-nav
+        ul
+            padding-left: 0
+            margin: 0
+            list-style-type: none
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            gap: 12px
+            width: 100%
+            li
+                flex: 0 1 calc(100% / 3 - 12px)
+                width: max-content
+                a
+                    color: #fff
+                    text-decoration: none
+                    font-size: 16px

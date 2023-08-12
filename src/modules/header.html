@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название проекта</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="@css/fontawesome.css">
+    <link rel="stylesheet" href="@css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="@css/bootstrap.min.css">
+    <link rel="stylesheet" href="@css/styles.min.css">
+</head>
+
+<body>
+<div id="header" class="header">
+    <div class="container header--container">
+        <div class="row header--row">
+            <div class="header--logo">
+                <a href="#"><img src="@img/logos/logo_dark.png" alt=""></a>
+            </div>
+            <div class="header--callback">
+                <a href="tel:+79998888888">+7 (999) 888-8888</a>
+                <span>Круглосуточно</span>
+            </div>
+            <div class="header--delivery">
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#pills-delivery" type="button" role="tab" aria-controls="pills-delivery" aria-selected="true">Доставка</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-pickup-tab" data-bs-toggle="pill" data-bs-target="#pills-pickup" type="button" role="tab" aria-controls="pills-pickup" aria-selected="false">Самовывоз</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane show active" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab">
+                        Введите адрес доставки
+                    </div>
+                    <div class="tab-pane" id="pills-pickup" role="tabpanel" aria-labelledby="pills-pickup-tab">
+                        ул. Самосвалова 22
+                    </div>
+                </div>
+            </div>
+            <div class="header--login">
+                <a href="#" class="header--login_authorization">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z" stroke="none" stroke-miterlimit="10"></path> <path d="M2.42188 16.875C3.18979 15.5446 4.2944 14.4399 5.62465 13.6718C6.9549 12.9037 8.46392 12.4993 10 12.4993C11.5361 12.4993 13.0451 12.9037 14.3753 13.6718C15.7056 14.4399 16.8102 15.5446 17.5781 16.875" stroke="#none" stroke-linecap="round" stroke-linejoin="round"></path></svg> Войти
+                </a>
+                <a href="#" class="header--login_personalArea">Администратор</a>
+            </div>
+            <div class="header--cart">
+                <div class="header--cart_button">
+                    <a href="#">
+                        <span class="cart--title">Корзина</span>
+                        <span class="cart--sum">1250 &#8381;</span>
+                        <span class="cart--count">12</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header--btns">
+                <button class="menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-regular fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header--navigation">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Новинки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Пицца</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Роллы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Обед/Ужин</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Собери WOK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Закуски</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Десерты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Напитки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Бронь столов</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,75 @@
+@import colors
+
+$arrow_position: -18px
+
+.sliderHome
+    padding: 40px 0
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    &-swiper
+        border-radius: 20px
+        overflow: hidden
+    &-slide
+        border-radius: 20px
+        overflow: hidden
+        picture
+            width: 100%
+        img
+            width: 100%
+    &-navigation
+        position: absolute
+        width: 100%
+        height: 0
+        margin: 0 auto
+        left: 0
+        right: 0
+        top: auto
+        bottom: auto
+        z-index: 2
+        display: flex
+        align-items: center
+        &_next,
+        &_prev
+            width: 60px
+            height: 60px
+            background-color: transparentize($mainColor, .2)
+            position: absolute
+            border-radius: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: background-color .3s, right .3s, left .3s
+            @media screen and (max-width: 480px)
+                width: 32px
+                height: 32px
+            svg
+                width: 16px
+                height: auto
+                @media screen and (max-width: 480px)
+                    width: 8px
+                path
+                    stroke: #fff
+                    fill: #fff
+            &:hover
+                background-color: $mainColor
+                svg
+                    position: relative
+        &_next
+            right: $arrow_position
+            @media screen and ( max-width: 500px )
+                right: 10px
+            &:hover
+                right: calc($arrow_position - 4px)
+                @media screen and ( max-width: 500px )
+                    right: 10px
+        &_prev
+            left: $arrow_position
+            @media screen and ( max-width: 500px )
+                left: 10px
+            &:hover
+                left: calc($arrow_position - 4px)
+                @media screen and ( max-width: 500px )
+                    left: 10px
+                

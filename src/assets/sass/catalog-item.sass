@@ -1,0 +1,108 @@
+@import colors
+@import elements
+
+.catalog
+    &-item
+        background-color: #fff
+        box-shadow: 0 0 20px -5px rgb(199 199 199 / 40%)
+        border-radius: 12px
+        overflow: hidden
+        display: grid
+        grid-template-rows: max-content 1fr max-content
+        &_labels
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            z-index: 2
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            span
+                padding: 4px 8px
+                text-align: center
+                width: 100%
+                border-radius: 0px
+            &--new
+                background-color: #00a816
+                color: #fff
+            &--preOrder
+                background-color: #fff
+            &--hit
+                background-color: #FF4B00
+                color: #fff
+        &_options
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            position: absolute
+            gap: 12px
+            bottom: 12px
+            left: 12px
+            span
+                width: 48px
+                height: 48px
+                border-radius: 50px
+                overflow: hidden
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: #fff
+                box-shadow: 0 0 8px -2px #ccc
+                padding: 8px
+                &.spice
+                &.vegan
+                img
+                    width: 90%
+                    height: auto
+        &_preview
+            aspect-ratio: 1 / 1
+            width: 100%
+            position: relative
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+            img
+                width: 100%
+                height: auto
+        &_information
+            padding: 12px 20px
+            h3
+                margin-bottom: 12px
+                line-height: 1em
+                a
+                    font-weight: 700
+                    color: $mainDark
+                    text-decoration: none
+                    text-transform: uppercase
+                    font-size: 24px
+                    line-height: 1.2em
+                    transition: color .3s
+                    &:hover
+                        color: $mainColor
+            p
+                color: #999999
+                margin-bottom: 0
+        &_priceBlock
+            padding: 12px 20px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+        &_price
+            display: flex
+            flex-direction: column
+            span
+                &.oldPrice
+                    font-weight: 300
+                    font-size: 16px
+                    line-height: 1em
+                    text-decoration: line-through
+                &.mainPrice
+                    font-weight: 700
+                    font-size: 24px
+                    line-height: 1em
+        &_button
+            a
+                @extend %button-main
