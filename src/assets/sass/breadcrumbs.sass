@@ -1,0 +1,27 @@
+@import colors
+@import elements
+
+.breadcrumbs
+    padding: 16px 0
+    &-container
+    &-list
+        padding-left: 0
+        margin-bottom: 0
+        display: flex
+        flex-direction: row
+        list-style-type: none
+    &-item
+        &::after
+            content: ' / '
+            margin: 0 12px
+            opacity: 0.4
+            color: $mainDark
+        &:nth-last-child(1)
+            &::after
+                display: none
+        a
+            color: $mainColor
+            text-decoration: none
+        span
+            color: transparentize($mainDark, .6)
+            font-weight: 600

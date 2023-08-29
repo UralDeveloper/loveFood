@@ -34,7 +34,7 @@ $arrow_position: -18px
         &_prev
             width: 60px
             height: 60px
-            background-color: transparentize($mainColor, .2)
+            background-color: #fff
             position: absolute
             border-radius: 50px
             display: flex
@@ -50,26 +50,14 @@ $arrow_position: -18px
                 @media screen and (max-width: 480px)
                     width: 8px
                 path
-                    stroke: #fff
-                    fill: #fff
-            &:hover
-                background-color: $mainColor
-                svg
-                    position: relative
+                    stroke: $mainColor
+                    fill: $mainColor
         &_next
             right: $arrow_position
             @media screen and ( max-width: 500px )
                 right: 10px
-            &:hover
-                right: calc($arrow_position - 4px)
-                @media screen and ( max-width: 500px )
-                    right: 10px
         &_prev
             left: $arrow_position
             @media screen and ( max-width: 500px )
                 left: 10px
-            &:hover
-                left: calc($arrow_position - 4px)
-                @media screen and ( max-width: 500px )
-                    left: 10px
                 

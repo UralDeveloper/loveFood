@@ -27,6 +27,9 @@
     &--btns
         @media screen and ( min-width: 1024px )
             display: none
+        @media screen and ( max-width: 500px )
+            &:not(.header--mobile)
+                display: none
         .menu
             &-btn
                 width: 50px
@@ -142,6 +145,9 @@
         display: flex
         align-items: center
         justify-content: flex-end
+        @media screen and ( max-width: 500px )
+            &:not(.header--mobile)
+                display: none
         &_button
             display: flex
             justify-content: flex-end
@@ -191,9 +197,19 @@
         right: 0
         z-index: 4
         background-color: #fff
+        &_container
+            display: none
+            @media screen and ( max-width: 500px )
+                display: grid
+                grid-template-columns: 60px 1fr max-content
+                grid-template-areas: "menu cart cart" "headerNav headerNav headerNav"
+                padding-top: 8px
+                padding-bottom: 8px
         .navbar
             position: relative
             padding: 0
+            @media screen and ( max-width: 500px )
+                grid-area: 'headerNav'
             &-login
             &::after
                 width: 100%

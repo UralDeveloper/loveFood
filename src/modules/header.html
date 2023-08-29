@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="@css/fontawesome.css">
@@ -73,6 +73,23 @@
     </div>
 </div>
 <div class="header--navigation">
+    <div class="container header--navigation_container">
+        <div class="header--btns header--mobile">
+            <button class="menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-regular fa-bars"></i>
+            </button>
+        </div>
+        <div class="header--cart header--mobile">
+            <div class="header--cart_button">
+                <a href="#">
+                    <span class="cart--title">Корзина</span>
+                    <span class="cart--sum">1250 &#8381;</span>
+                    <span class="cart--count">12</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <div class="collapse navbar-collapse" id="mainNav">

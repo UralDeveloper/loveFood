@@ -1,0 +1,145 @@
+@import colors
+@import elements
+
+.singleProduct
+    &-container
+        padding-top: 40px
+        padding-bottom: 0
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        grid-template-areas: 'gallery builder'
+        @media screen and ( max-width: 500px )
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-areas: 'gallery' 'builder'
+    &-gallery
+        grid-area: gallery
+        width: 100%
+        display: grid
+        align-items: center
+        justify-content: center
+    &-swiper
+        width: 100%
+    &-slide
+        img
+            width: 100%
+    &-builder
+        grid-area: builder
+        width: 100%
+        display: block
+    &-header
+        display: grid
+        grid-template-columns: 2fr 1fr
+        grid-gap: 12px 20px
+        align-items: flex-start
+        @media screen and ( max-width: 500px )
+            grid-template-columns: repeat(1, 1fr)
+    &-title
+        h1
+            font-size: 40px
+            line-height: 1.2em
+            margin-bottom: 0
+    &-price
+        text-align: left
+        font-size: 40px
+        font-weight: 600
+        height: max-content
+        line-height: 1.2em
+        display: flex
+        flex-direction: column
+        &_oldPrice
+            font-size: 20px
+            line-height: 1em
+            font-weight: 300
+            text-decoration: line-through
+            opacity: 0.5
+    &-composition
+        &_title
+            @extend %singleProduct-description_title
+        &_list
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            flex-wrap: wrap
+            gap: 0 4px
+            button
+                font-size: 12px
+                padding: 0
+                background: none
+                border: none
+    &-options
+        &_title
+            @extend %singleProduct-description_title
+        &_list
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            background-color: #efefef
+            border-radius: 20px
+            padding: 4px
+            margin: 20px 0
+            gap: 4px
+            width: max-content
+            @media screen and ( max-width: 500px )
+                flex-direction: column
+                width: 100%
+        &_item
+            // width: 100%
+            flex: 1 0 1
+            input
+                & ~ label
+                    background-color: transparent
+                    text-align: center
+                    width: 100%
+                    border-radius: 20px
+                    padding: 4px 20px
+                    color: $mainDark
+                    transition: background-color .3s, color .2s
+                    cursor: pointer
+                &[type="radio"]
+                    display: none
+                &:checked
+                    & ~ label
+                        background-color: $mainColor
+                        color: #fff
+    &-tabs
+        padding: 40px 0
+        margin: 40px 0
+        background-color: #f5f5f5
+        &_container
+            .nav
+                &-pills
+                    @media screen and ( max-width: 500px )
+                    flex-direction: column
+                &-item
+                &-link
+                    border-radius: 20px
+                    padding: 8px 28px
+                    color: $mainDark
+                    @media screen and ( max-width: 500px )
+                        width: 100%
+                    &.active
+                        color: #fff
+                        background-color: $mainColor
+            .tab
+                &-content
+                &-pane
+                    padding: 20px 28px
+                    @media screen and ( max-width: 500px )
+                        padding: 20px 0
+                    table
+                        width: 100%
+                        max-width: 800px
+                        // margin-top: 20px
+                        thead
+                            tr
+                                border-bottom: 1px solid transparentize($mainDark, .8)
+                                td
+                                    padding: 8px 0px
+                        tbody
+                            tr
+                                border-bottom: 1px solid transparentize($mainDark, .8)
+                                &:nth-last-child(1)
+                                    border-bottom: none
+                                td
+                                    padding: 8px 0px

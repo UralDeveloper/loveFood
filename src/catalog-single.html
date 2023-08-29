@@ -1,0 +1,77 @@
+@@include('modules/header.html')
+
+@@include('modules/blocks/breadcrumbs.html')
+
+<div class="singleProduct">
+    <div class="container singleProduct-container">
+        <div class="singleProduct-gallery">
+            @@include('modules/blocks/product/gallery.html')
+        </div>
+        <div class="singleProduct-buider">
+            <div class="singleProduct-header">
+                <div class="singleProduct-title">
+                    <h1>Пицца 4 сыра</h1>
+                </div>
+                <div class="singleProduct-price">
+                    <span class="singleProduct-price_oldPrice"><span>1200</span>&#8381;</span>
+                    <span class="singleProduct-price_mainPrice"><span>600</span>&#8381;</span>
+                </div>
+            </div>
+            <div class="singleProduct-meta">
+                <span>35 см, традиционное тесто, 820 г</span>
+            </div>
+            <div class="singleProduct-composition">
+                <div class="singleProduct-composition_title">
+                    <p>Состав</p>
+                </div>
+                <div class="singleProduct-composition_list">
+                    <button>Цыпленок</button>, <button>шампиньоны</button>, <button>сливочный соус с грибами</button>, <button>красный лук</button>, <button>чеснок</button>, <button>моцарелла</button>, <button>смесь сыров чеддер и пармезан</button>, <button>фирменный соус альфредо</button>
+                </div>
+            </div>
+            <div class="singleProduct-options">
+                <div class="singleProduct-options_title">
+                    <p>Размер</p>
+                </div>
+                <div class="singleProduct-options_list">
+                    <div class="singleProduct-options_item">
+                        <input type="radio" name="product_size" id="product_little">
+                        <label for="product_little">Маленькая</label>
+                    </div>
+                    <div class="singleProduct-options_item">
+                        <input type="radio" name="product_size" id="product_medium" checked>
+                        <label for="product_medium">Средняя</label>
+                    </div>
+                    <div class="singleProduct-options_item">
+                        <input type="radio" name="product_size" id="product_big">
+                        <label for="product_big">Большая</label>
+                    </div>
+                </div>
+            </div>
+            <div class="singleProduct-options">
+                <div class="singleProduct-options_title">
+                    <p>Тесто</p>
+                </div>
+                <div class="singleProduct-options_list">
+                    <div class="singleProduct-options_item">
+                        <input type="radio" name="product_thickness" id="product_subtle">
+                        <label for="product_subtle">Тонкое</label>
+                    </div>
+                    <div class="singleProduct-options_item">
+                        <input type="radio" name="product_thickness" id="product_bold" checked>
+                        <label for="product_bold">Традиционное</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Информация о товаре -->
+<!-- @@include('modules/blocks/product/builder.html') -->
+
+<!-- Табы  -->
+@@include('modules/blocks/product/tabs.html')
+
+<!-- Upsale  -->
+@@include('modules/blocks/catalog_list.html', {'titleCatalog':'Похожие товары'})
+
+@@include('modules/footer.html')

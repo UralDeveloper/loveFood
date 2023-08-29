@@ -8,3 +8,10 @@ let sliderHome = new Swiper('.sliderHome-swiper', {
         prevEl: '.sliderHome-navigation .sliderHome-navigation_prev',
     },
 })
+
+let slider_singleProduct = new Swiper('.singleProduct-swiper', {
+    autoplay: true,
+    loop: true,
+    spaceBetween: 40,
+    speed: 800,
+})
