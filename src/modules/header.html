@@ -56,11 +56,11 @@
             </div>
             <div class="header--cart">
                 <div class="header--cart_button">
-                    <a href="#">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <span class="cart--title">Корзина</span>
                         <span class="cart--sum">1250 &#8381;</span>
                         <span class="cart--count">12</span>
-                    </a>
+                    </button>
                 </div>
             </div>
             <div class="header--btns">
@@ -82,11 +82,11 @@
         </div>
         <div class="header--cart header--mobile">
             <div class="header--cart_button">
-                <a href="#">
+                <button  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="cart--title">Корзина</span>
                     <span class="cart--sum">1250 &#8381;</span>
                     <span class="cart--count">12</span>
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -110,4 +110,20 @@
             </div>
         </div>
     </nav>
+</div>
+<div class="header--cart_side">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Корзина</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body header--cart_side-list">
+            @@loop('blocks/cart-item.html', [
+                {},{},{},{},{},{},{}
+            ])
+        </div>
+        <div class="offcanvas-footer">
+            <a href="#" class="btn_to_cart">Оформить заказа</a>
+        </div>
+    </div>
 </div>

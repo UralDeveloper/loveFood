@@ -1,0 +1,25 @@
+<div class="categorys categorys-category">
+    <div class="container">
+        <h2>Категории</h2>
+        <div class="categorys-list">
+            @@loop('categorys_item.html', [
+                {
+                    "img_name" : 'burger.jpg',
+                    "name" : "Бургеры",
+                },
+                {
+                    "img_name" : 'drink.jpg',
+                    "name" : "Напитки",
+                },
+                {
+                    "img_name" : 'pack.jpg',
+                    "name" : "Наборы",
+                },
+                {
+                    "img_name" : 'subway.jpg',
+                    "name" : "Сендвичи",
+                },
+            ])
+        </div>
+    </div>
+</div>

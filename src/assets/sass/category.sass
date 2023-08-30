@@ -1,0 +1,39 @@
+@import colors
+@import elements
+
+.categorys
+    padding: 40px 0
+    h2
+        font-size: 40px
+        line-height: 1.2em
+        font-weight: 400
+        text-align: center
+        margin-bottom: 40px
+        font-family: 'KZ Cooper', 'Roboto'
+    &-list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 16px 16px
+        @media screen and ( max-width: 500px )
+            grid-template-columns: repeat(1, 1fr)
+    &-item
+        &_preview
+            border-radius: 20px
+            overflow: hidden
+            a
+                width: 100%
+                height: 20px
+            picture
+                width: 100%
+                height: auto
+                aspect-ratio: 16 / 9
+                position: relative
+            img
+                width: 100%
+                height: auto
+        &_title
+            a
+                font-size: 28px
+                font-family: 'KZ Cooper', 'Roboto'
+                color: $mainDark
+                text-decoration: none
