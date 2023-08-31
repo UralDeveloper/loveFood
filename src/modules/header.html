@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Название проекта</title>
+    <link rel="shortcut icon" href="@img/icons/favicon.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,16 +112,47 @@
         </div>
     </nav>
 </div>
-<div class="header--cart_side">
+<div class="cart_side">
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Корзина</h5>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">7 товара на 2 780 ₽</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body header--cart_side-list">
+        <div class="offcanvas-body cart_side-list">
             @@loop('blocks/cart-item.html', [
-                {},{},{},{},{},{},{}
+                {
+                    'item_id': 'product_id_1',
+                    'item_title' : 'Пицца Торрето'
+                },{
+                    'item_id': 'product_id_2',
+                    'item_title' : 'Ролл Аминоко'
+                },
             ])
+            <div class="cart_side_upsale">
+                <div class="swiper swiper-cart_upsale">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cart_side_upsale-item">
+                            <div class="cart_side_upsale-preview">
+                                <img src="@img/souses.jpg" alt="">
+                            </div>
+                        </div>
+                        @@loop('blocks/cart-upsale_item.html', [
+                            {
+                                'item_title' : 'Шоколадный маффин'
+                            },
+                            {
+                                'item_title' : 'Сырный маффин'
+                            },
+                            {
+                                'item_title' : 'Банановый маффин'
+                            },
+                            {
+                                'item_title' : 'Клубничный маффин'
+                            },
+                        ])
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="offcanvas-footer">
             <a href="#" class="btn_to_cart">Оформить заказа</a>

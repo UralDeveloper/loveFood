@@ -15,3 +15,11 @@ let slider_singleProduct = new Swiper('.singleProduct-swiper', {
     spaceBetween: 40,
     speed: 800,
 })
+
+let slide_sliderCart = new Swiper('.swiper-cart_upsale', {
+    slidesPerView: 'auto',
+    autoplay: false,
+    loop: false,
+    spaceBetween: 12,
+    speed: 600
+})

@@ -245,50 +245,154 @@
                     font-weight: 500
                     border-bottom: 2px solid $mainColor
     // Корзина offcanvas
-    &--cart_side
-        &-list
-            display: flex
-            flex-direction: column
-            gap: 12px
-        &-item
-            position: relative
-            background-color: #f5f5f5
+.cart_side
+    &-list
+        display: flex
+        flex-direction: column
+        gap: 12px
+    &-item
+        position: relative
+        background-color: #fff
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        padding: 12px
+        grid-gap: 12px
+        border-radius: 20px
+        .item_remove
+            background: none
+            border: none
+            width: 20px
+            height: 20px
+            position: absolute
+            right: 12px
+            top: 12px
+        &_details
             display: grid
             grid-template-columns: 120px 1fr
-            padding: 12px
             grid-gap: 20px
+        &_preview
+            width: 100%
+            aspect-ratio: 1 / 1
             border-radius: 20px
-            .item_remove
-                background: none
-                border: none
-                width: 20px
-                height: 20px
-                position: absolute
-                right: 12px
-                top: 12px
-            &_preview
+            overflow: hidden
+            picture
                 width: 100%
-                aspect-ratio: 1 / 1
-                border-radius: 20px
-                overflow: hidden
-                picture
-                    width: 100%
-                img
-                    width: 100%
-            &_info
-                display: flex
-                flex-direction: column
-                padding-right: 20px
-                gap: 8px
-                .title
+            img
+                width: 100%
+        &_info
+            display: flex
+            flex-direction: column
+            padding-right: 20px
+            gap: 8px
+            .cart_item
+                &-title
                     color: $mainDark
                     font-weight: 600
                     text-decoration: none
                     font-size: 20px
-                .price
+                    margin-bottom: 0
+                &-size
+                    font-size: 12px
+                    margin-bottom: 4px
+                &-additionally
+                    font-size: 12px
+                    margin-bottom: 0
+        &_price
+            border-top: 1px solid transparentize($mainDark, .8)
+            padding-top: 12px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            .priceWrapper
+                display: flex
+                flex-direction: row
+                gap: 8px
+                .mainPrice
+                    margin-bottom: 0
+                    font-weight: 600
                     font-size: 20px
+                .oldPrice
+                    margin-bottom: 0
+                    position: relative
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    &::after
+                        position: absolute
+                        content: ''
+                        height: 2px
+                        width: 120%
+                        background-color: $mainColor
+                        transform: rotate(-15deg)
+                    // text-decoration: line-through
+            .countWrapper
+                form
+                    display: flex
+                    button
+                        background-color: #f3f3f3
+                        color: $mainDark
+                        border: none
+                        width: 30px
+                        height: 30px
+                        font-size: 14px
+                        transition: color .3s, background-color .5s
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        &:hover
+                            color: #fff
+                            background-color: $mainColor_hover
+                        &.counter_minus
+                            border-radius: 40px 0 0 40px
+                        &.counter_plus
+                            border-radius: 0 40px 40px 0
+                input[type="number"]
+                    outline: none
+                    border: none
+                    width: 32px
+                    text-align: center
+                    background-color: #f3f3f3
+                    &::-webkit-inner-spin-button
+                        display: none
+    &_upsale
+        .swiper
+            &-cart_upsale
+            &-wrapper
+            &-slide
+        &-item
+            display: flex
+            flex-direction: row
+            gap: 20px
+            width: max-content
+            border-radius: 20px
+            padding: 12px
+            background-color: #fff
+        &-preview
+            img
+                width: 120px
+        &-information
+            min-width: 140px
+            max-width: 200px
+            display: flex
+            flex-direction: column
+            gap: 8px
+            padding-right: 20px
+            p.title
+                font-size: 20px
+                font-weight: 600
+                margin-bottom: 0
+                line-height: 1.2em
+            .price
+                font-size: 20px
 
+    
 .offcanvas
+    background-color: #f3f3f7
+    &-end
+        border-radius: 20px 0 0 20px
+        width: 100%
+        max-width: 480px
     &-footer
         padding: 12px 20px
         a

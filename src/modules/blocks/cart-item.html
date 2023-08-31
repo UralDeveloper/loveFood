@@ -1,10 +1,26 @@
-<div class="header--cart_side-item">
+<div id=@@item_id class="cart_side-item">
     <button class="item_remove fa-solid fa-xmark"></button>
-    <a href="#" class="header--cart_side-item_preview">
-        <img src="@img/pizza10.jpeg" alt="">
-    </a>
-    <div class="header--cart_side-item_info">
-        <a href="#" class="title">Пицца Торрето</a>
-        <span class="price">758&#8381;</span>
+    <div class="cart_side-item_details">
+        <div class="cart_side-item_preview">
+            <img src="@img/pizza10.jpeg" alt="">
+        </div>
+        <div class="cart_side-item_info">
+            <p class="cart_item-title">@@item_title</p>
+            <p class="cart_item-size">Большая 35 см, традиционное тесто</p>
+            <p class="cart_item-additionally">+ пикантная пепперони, моцарелла, смесь сыров чеддер и пармезан</p>
+        </div>
+    </div>
+    <div class="cart_side-item_price">
+        <div class="priceWrapper">
+            <p class="mainPrice"><span>768</span>&#8381;</p>
+            <p class="oldPrice"><span>1500</span>&#8381;</p>
+        </div>
+        <div class="countWrapper">
+            <form action="#">
+                <button class="counter_minus"><i class="fa-solid fa-minus"></i></button>
+                <input type="number" class="counter_number" value="1" min="1" max="99">
+                <button class="counter_plus"><i class="fa-solid fa-plus"></i></button>
+            </form>
+        </div>
     </div>
 </div>
